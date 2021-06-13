@@ -26,18 +26,26 @@ struct CardView : View {
     var body : some View {
         ZStack{
             RoundedRectangle(cornerRadius: 20)
-            .stroke(lineWidth:3)
-             Text("Hello ,World!")
+            
+                .fill()
+                .foregroundColor(.white)
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(lineWidth:3)
+            Text("✈️")
+                .font(.largeTitle)
         }
     }
 }
    
    
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            ContentView()
-//        }
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ContentView()
+                .preferredColorScheme(.dark)
+            ContentView()
+                .preferredColorScheme(.light)
+        }
+    }
+}
